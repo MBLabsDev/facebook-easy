@@ -8,15 +8,15 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/FacebookEasy" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/example" />
+            <option value="$PROJECT_DIR$/facebook-easy" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/FacebookEasy" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/example" />
+            <option value="$PROJECT_DIR$/facebook-easy" />
           </set>
         </option>
       </GradleProjectSettings>
