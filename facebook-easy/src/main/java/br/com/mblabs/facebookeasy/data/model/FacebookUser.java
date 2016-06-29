@@ -8,8 +8,8 @@ public class FacebookUser implements Serializable {
     private String id;
     private String birthday;
     private String email;
-    private String firstName;
-    private String lastName;
+    private String first_name;
+    private String last_name;
     private String photo;
     private String gender;
 
@@ -39,27 +39,27 @@ public class FacebookUser implements Serializable {
 
     @NonNull
     public String getName() {
-        String name = firstName;
-        if (lastName != null) {
-            name += " " + lastName;
+        String name = first_name;
+        if (last_name != null) {
+            name += " " + last_name;
         }
         return name;
     }
 
     public String getFirstName() {
-        return firstName;
+        return first_name;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.first_name = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
     public String getPhoto() {

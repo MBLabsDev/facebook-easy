@@ -12,6 +12,7 @@ import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.Profile;
+import com.facebook.internal.ImageRequest;
 import com.facebook.login.LoginManager;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -99,7 +100,7 @@ public class LibFacebookDAO implements FacebookDAO {
             final GraphRequest request = GraphRequest.newMeRequest(token, null);
 
             final Bundle parameters = new Bundle();
-            parameters.putString("fields", "email, gender, birthday");
+            parameters.putString("fields", "id, first_name, last_name, email, gender, birthday");
             request.setParameters(parameters);
 
             final GraphResponse response = request.executeAndWait();
@@ -109,27 +110,17 @@ public class LibFacebookDAO implements FacebookDAO {
 
     private FacebookUser parseUserFacebookFromResponse(@NonNull final GraphResponse response) {
         final JSONObject object = response.getJSONObject();
-        final Profile currentProfile = Profile.getCurrentProfile();
 
         FacebookUser user;
-
         if (object == null) {
             Log.e(TAG, "Null JSONObject");
-            return null;
-        }
-
-        if (currentProfile == null) {
-            Log.e(TAG, "User not logged");
             return null;
         }
 
         final Gson gson = new GsonBuilder().create();
         user = gson.fromJson(object.toString(), FacebookUser.class);
 
-        user.setId(currentProfile.getId());
-        user.setFirstName(currentProfile.getFirstName());
-        user.setLastName(currentProfile.getLastName());
-        user.setPhoto(currentProfile.getProfilePictureUri(512, 512).toString());
+        user.setPhoto(ImageRequest.getProfilePictureUri(user.getId(), 512, 512).toString());
 
         return user;
     }

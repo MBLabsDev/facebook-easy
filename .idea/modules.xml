@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/example/app.iml" filepath="$PROJECT_DIR$/example/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/facebook-easy/FacebookEasy.iml" filepath="$PROJECT_DIR$/facebook-easy/FacebookEasy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/facebook-easy/facebook-easy.iml" filepath="$PROJECT_DIR$/facebook-easy/facebook-easy.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-facebook-easy-android.iml" filepath="$PROJECT_DIR$/library-facebook-easy-android.iml" />
     </modules>
   </component>

@@ -2,7 +2,7 @@
 
 ## Description
 
-This lib was created to turn Facebook Android SDK more more abstraction, easy and simplified to use
+This lib was created to turn Facebook Android SDK more abstraction, easy and simplified to use
 
 ## Integration
 

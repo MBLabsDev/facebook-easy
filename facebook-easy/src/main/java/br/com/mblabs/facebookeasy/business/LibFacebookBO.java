@@ -38,11 +38,11 @@ public class LibFacebookBO implements FacebookBO {
     public LibFacebookBO(@NonNull final FacebookDAO facebookDAO, @NonNull final LoginManager loginManager) {
         mFacebookDAO = facebookDAO;
         mLoginManager = loginManager;
+        mCallbackManager = CallbackManager.Factory.create();
     }
 
     @Override
     public void login(@NonNull List<String> permissions, @NonNull final AppFacebookLoginListener callback) {
-        mCallbackManager = CallbackManager.Factory.create();
         mLoginManager.registerCallback(mCallbackManager, new FacebookLoginCallback(callback));
 
         try {
