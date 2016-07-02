@@ -26,7 +26,7 @@ import br.com.mblabs.facebookeasy.data.dao.LibFacebookDAO;
 import br.com.mblabs.facebookeasy.data.model.FacebookFriend;
 import br.com.mblabs.facebookeasy.data.model.FacebookUser;
 
-public abstract class FacebookManager {
+public class FacebookManager {
 
     private static final String TAG = FacebookManager.class.getSimpleName();
     private final List<String> mPermission;
