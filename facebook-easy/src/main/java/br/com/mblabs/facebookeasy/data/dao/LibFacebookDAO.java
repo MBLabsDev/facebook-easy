@@ -11,7 +11,6 @@ import android.util.Log;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
-import com.facebook.Profile;
 import com.facebook.internal.ImageRequest;
 import com.facebook.login.LoginManager;
 import com.google.gson.Gson;
@@ -120,7 +119,9 @@ public class LibFacebookDAO implements FacebookDAO {
         final Gson gson = new GsonBuilder().create();
         user = gson.fromJson(object.toString(), FacebookUser.class);
 
-        user.setPhoto(ImageRequest.getProfilePictureUri(user.getId(), 512, 512).toString());
+        if (user.getId() != null && !user.getId().isEmpty()) {
+            user.setPhoto(ImageRequest.getProfilePictureUri(user.getId(), 512, 512).toString());
+        }
 
         return user;
     }
