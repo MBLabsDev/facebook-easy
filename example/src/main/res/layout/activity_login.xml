@@ -9,6 +9,24 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="Facebook easy Library"
+        android:textStyle="bold"
+        android:textColor="#7D7D7D"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:textSize="16sp"
+        android:text="This lib was created to turn Facebook Android SDK more abstraction, easy and simplified to use"
+        android:textColor="#7D7D7D"/>
+
     <Button
         android:id="@+id/email_sign_in_button"
         style="?android:textAppearanceSmall"

@@ -72,6 +72,10 @@ public class FacebookManager {
         }
     }
 
+    public boolean isLogged() {
+        return mFacebookBO.getAccessToken() != null;
+    }
+
     public void connect(final FacebookBO.AppFacebookLoginListener listener) {
         mFacebookBO.login(mPermission, listener);
     }
